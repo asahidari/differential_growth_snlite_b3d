@@ -68,6 +68,28 @@ More detailed parameters in the script:
 
 ![Screenshot of parameters in the code.](./images/DifferentialGrowthOnMeshParameters_Screenshot.png)
 
+#### differential_mesh_growth.py
+Input Datas:
+- steps: Total frame steps.
+- vertices_in:  Mesh vertices
+- edges_in:  Mesh edges
+- faces_in:  Mesh polygons
+- weights_in: Vertex weights
+- random_seed: Random seed to make first velocities
+- relax_iterations: Iteration count to relax mesh
+- max_edge_length: Max distance between each vertices
+- framenum: Frame number of output datas
+
+![Image of the Script Node Lite using differential_line_growth.py](./images/DifferentialeMeshGrowthNodeImage_Screenshot.png)
+
+More detailed parameters in the script:  
+- SEPARATION_FORCE/DISTANCE: Separation parameters between each vertices. Ratio to the average edge length.  
+- MAX_VELOCITY:  Max velocity of the vertices. If edges become larger than this value, the edges will be subdivided.  
+- COHESION_FORCE/DISTANCE: Cohesion parameters between each vertices.  
+- RELAX_WEIGHTED_ONLY: Apply relax mesh only for vertices whose weight values are larger than zero.
+
+![Screenshot of parameters in the code.](./images/DifferentialMeshGrowthParameters_Screenshot.png)
+
 ## Examples
 
 ### Differential Line Growth
@@ -75,6 +97,15 @@ More detailed parameters in the script:
 
 ### Differential Growth on mesh
 ![Image of Differential Growth on mesh example](./images/DifferentialGrowthOnMeshExample.png)
+
+### Differential Mesh Growth
+
+![Image of Differential Mesh Growth Disc example](./images/DifferentialMeshGrowthDiscExample.png)
+
+![Image of Differential Mesh Growth Torus example](./images/DifferentialMeshGrowthTorusExample.png)
+
+![Image of Differential Mesh Growth Partial example](./images/DifferentialMeshGrowthPartialExample.png)
+
 
 ## Author
 
